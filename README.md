@@ -5,8 +5,6 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
-
 Below are the objectives the instructor will use to review your code with you next week.
 
 Does your code meet general coding standards (commits, spacing, naming, etc)?
