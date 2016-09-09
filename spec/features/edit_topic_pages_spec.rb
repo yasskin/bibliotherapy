@@ -7,7 +7,7 @@ describe "the edit a topic process" do
     fill_in 'Name', :with => 'Anxieties'
     click_on "Create Topic"
     click_link 'Anxieties'
-    click_link 'Edit'
+    click_link 'Update Topic'
     fill_in 'Name', :with => 'Anxiety'
     click_on 'Update Topic'
     expect(page).to have_content 'Anxiety'
@@ -19,7 +19,7 @@ describe "the edit a topic process" do
     fill_in 'Name', :with => 'Anxieties'
     click_on "Create Topic"
     click_link 'Anxieties'
-    click_link 'Edit'
+    click_link 'Update Topic'
     fill_in 'Name', :with => ''
     click_on 'Update Topic'
     expect(page).to have_content 'errors'
