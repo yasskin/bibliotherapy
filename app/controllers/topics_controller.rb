@@ -24,9 +24,29 @@ class TopicsController < ApplicationController
     end
   end
 
+  def edit
+    @topic = Topic.find(params[:id])
+    render :edit
+  end
+
+  def update
+    @topic = Topic.find(params[:id])
+    if @topic.update(topic_params)
+      redirect_to topics_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @topic = Topic.find(params[:id])
+    @topic.destroy
+    redirect_to topics_path
+  end
+
 private
   def topic_params
-    params.require(:topic).permit(:name) 
+    params.require(:topic).permit(:name)
   end
 
 end
