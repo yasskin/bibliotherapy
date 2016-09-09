@@ -3,7 +3,7 @@
 <% if @topic.errors.any? %>
   <h3>Oops there were some errors. Please try again:</h3>
   <ul>
-    <% @topic.errors.full_message.each do |message| %>
+    <% @topic.errors.full_messages.each do |message| %>
       <li><%= message %></li>
     <% end %>
   </ul>
