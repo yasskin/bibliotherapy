@@ -2,22 +2,20 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
-    render :index
   end
 
   def show
     @topic = Topic.find(params[:id])
-    render :show
   end
 
   def new
     @topic = Topic.new
-    render :new
   end
 
   def create
     @topic = Topic.new(topic_params)
     if @topic.save
+      flash[:notice] = "Topic successfully added!"
       redirect_to topics_path
     else
       render :new
@@ -32,6 +30,7 @@ class TopicsController < ApplicationController
   def update
     @topic = Topic.find(params[:id])
     if @topic.update(topic_params)
+      flash[:notice] = "Topic successfully updated!"
       redirect_to topics_path
     else
       render :edit
@@ -41,6 +40,7 @@ class TopicsController < ApplicationController
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
+    flash[:notice] = "Topic successfully deleted!"
     redirect_to topics_path
   end
 

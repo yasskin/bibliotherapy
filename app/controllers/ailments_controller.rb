@@ -9,6 +9,7 @@ class AilmentsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @ailment = @topic.ailments.new(ailment_params)
     if @ailment.save
+      flash[:notice] = "Ailment successfully created!"
       redirect_to topic_path(@ailment.topic)
     else
       render :new
@@ -24,6 +25,7 @@ class AilmentsController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @ailment = Ailment.find(params[:id])
     if @ailment.update(ailment_params)
+      flash[:notice] = "Ailment successfully updated!"
       redirect_to topic_path(@ailment.topic)
     else
       render :edit
@@ -33,6 +35,7 @@ class AilmentsController < ApplicationController
   def destroy
     @ailment= Ailment.find(params[:id])
     @ailment.destroy
+    flash[:notice] = "Ailment successfully deleted!"
     redirect_to topic_path(@ailment.topic)
   end
 
