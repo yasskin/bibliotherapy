@@ -1,9 +1,29 @@
 <h1><%= @topic.name %></h1>
 
+<% if @topic.ailments.any? %>
+  <h4>Here are the ailments for this topic</h4>
+
+  <ul>
+    <% @topic.ailments.each do |ailment| %>
+      <li>
+        <%= ailment.description %>
+        <%= link_to "Edit", edit_topic_ailment_path(@topic, ailment) %> |
+        <%= link_to "Delete", topic_ailment_path(@topic, ailment),
+                                 :data => {:confirm => "Are you sure?",
+                                                :method => "delete"} %>
+      </li>
+      <% end %>
+  </ul>
+<% else %>
+  <p>There are no ailments yet!</p>
+<% end %>
 
 <hr>
-<p><%= link_to "Return to topics", topics_path %></p>
+<p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic) %></p>
+
+<hr>
 <p><%= link_to "Edit", edit_topic_path(@topic) %></p>
-<p><%= link_to "Delete", topic_path(@topic),
+<p><%= link_to "Delete Topic", topic_path(@topic),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
+<p><%= link_to "Return to topics", topics_path %></p>

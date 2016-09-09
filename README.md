@@ -17,16 +17,23 @@ Does the app use the asset pipeline for Bootstrap/CSS?
 Does the application work?
 Are you able to discuss your code with your instructor using the correct terminology?
 
-Rails Routes
-Prefix Verb   URI Pattern                Controller#Action
-topics GET    /topics(.:format)          topics#index
-       POST   /topics(.:format)          topics#create
-new_topic GET    /topics/new(.:format)      topics#new
-edit_topic GET    /topics/:id/edit(.:format) topics#edit
- topic GET    /topics/:id(.:format)      topics#show
-       PATCH  /topics/:id(.:format)      topics#update
-       PUT    /topics/:id(.:format)      topics#update
-       DELETE /topics/:id(.:format)      topics#destroy
+Prefix Verb   URI Pattern                                Controller#Action
+topic_cures GET    /topics/:topic_id/cures(.:format)          cures#index
+       POST   /topics/:topic_id/cures(.:format)          cures#create
+new_topic_cure GET    /topics/:topic_id/cures/new(.:format)      cures#new
+edit_topic_cure GET    /topics/:topic_id/cures/:id/edit(.:format) cures#edit
+topic_cure GET    /topics/:topic_id/cures/:id(.:format)      cures#show
+       PATCH  /topics/:topic_id/cures/:id(.:format)      cures#update
+       PUT    /topics/:topic_id/cures/:id(.:format)      cures#update
+       DELETE /topics/:topic_id/cures/:id(.:format)      cures#destroy
+topics GET    /topics(.:format)                          topics#index
+       POST   /topics(.:format)                          topics#create
+new_topic GET    /topics/new(.:format)                      topics#new
+edit_topic GET    /topics/:id/edit(.:format)                 topics#edit
+ topic GET    /topics/:id(.:format)                      topics#show
+       PATCH  /topics/:id(.:format)                      topics#update
+       PUT    /topics/:id(.:format)                      topics#update
+       DELETE /topics/:id(.:format)                      topics#destroy
 
 * Ruby version
 
