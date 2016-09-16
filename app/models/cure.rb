@@ -1,5 +1,6 @@
 class Cure < ActiveRecord::Base
-  belongs_to :topic
 
-  validates :sympton, :presence => true
+  belongs_to :ailment
+
+  validates :therapy, :presence => true
 end

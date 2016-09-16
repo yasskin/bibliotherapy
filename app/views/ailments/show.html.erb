@@ -1,0 +1,33 @@
+<% content_for(:title, "Ailment | Bibliotherapy") %>
+
+<h2><%= @ailment.description %></h2>
+
+
+<p><%= link_to "Add a Cure", new_ailment_cure_path(@ailment) %></p>
+
+<% if @ailment.cures.any? %>
+
+  <h4>Here are the bibliographic cures for this ailment</h4>
+
+  <ul>
+    <% @ailment.cures.each do |cure| %>
+    <li>Headline: <%= cure.headline %></li>
+    <li>Symptom: <%= cure.symptom %></li>
+    <li>Therapy: <%= cure.therapy %></li>
+    <li>Author: <%= cure.author %></li>
+    <li>Book Title: <%= cure.book_title %></li>
+    <li>Book Cover: <%= cure.book_cover %></li>
+    <li><%= link_to "Edit", edit_ailment_cure_path(@ailment, cure) %> | <%= link_to "Delete", ailment_cure_path(@ailment, cure), :data => {:confirm => "Are you sure?", :method => "delete"} %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no cures yet</p>
+<% end %>
+
+<hr>
+
+<hr>
+<p><%= link_to "Update Cure", edit_ailment_cure_path(@topic, @ailment, cure) %></p>
+<p><%= link_to "Delete Cure", ailment_cure_path(@topic, @ailment, cure),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>

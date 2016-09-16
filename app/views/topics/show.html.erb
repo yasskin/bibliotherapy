@@ -10,7 +10,7 @@
   <ul>
     <% @topic.ailments.each do |ailment| %>
       <li>
-        <%= ailment.description %>
+        <%= link_to ailment.description, topic_ailment_path(ailment) %> |
         <%= link_to "Edit", edit_topic_ailment_path(@topic, ailment) %> |
         <%= link_to "Delete", topic_ailment_path(@topic, ailment),
                                  :data => {:confirm => "Are you sure?",
@@ -24,7 +24,6 @@
 
 <hr>
 
-<hr>
 <p><%= link_to "Update Topic", edit_topic_path(@topic) %></p>
 <p><%= link_to "Delete Topic", topic_path(@topic),
                          :data => {:confirm => "You sure?",

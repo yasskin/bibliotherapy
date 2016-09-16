@@ -1,5 +1,14 @@
 class AilmentsController < ApplicationController
 
+  def index
+    @ailments = Ailment.all
+  end
+
+  def show
+    @ailment = Ailment.find(params[:id])
+    @cure = Cure.find(params[:id])
+  end
+
   def new
     @topic = Topic.find(params[:topic_id])
     @ailment = @topic.ailments.new

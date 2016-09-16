@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "the edit a ailment process" do
+describe "the edit an ailment process" do
   it "edits a ailment" do
     topic = FactoryGirl.create(:topic)
     visit topics_path
