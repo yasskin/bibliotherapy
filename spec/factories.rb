@@ -1,8 +1,13 @@
 FactoryGirl.define do
   factory :user do
-    
+    email('test@email.com')
+    password('password')
+    password_confirmation('password')
   end
-  factory(:topic) do
+end
+
+FactoryGirl.define do
+  factory :topic do
     name('Love')
   end
 end

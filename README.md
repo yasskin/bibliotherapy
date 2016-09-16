@@ -97,30 +97,3 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #
-
-
-require 'rails_helper'
-
-describe "user log in" do
-  it "allows an existing user to sign in" do
-    User.create!(email: "me@email.com", password: "password123")
-
-    visit "/users/sign_in"
-
-    fill_in "Email", with: "me@email.com"
-    fill_in "Password", with: "password123"
-
-    click_button "Sign in"
-
-    expect(page).to have_content("Signed in successfully.")
-  end
-end
-
-# test the registration process as well.
-
-describe User do
-  it "sends an email when the user is created" do
-    user = FactoryGirl.create(:user)
-    ActionMailer::Base.deliveries.last.to.should eq [user.email]
-  end
-end

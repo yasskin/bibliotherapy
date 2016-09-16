@@ -1,6 +1,8 @@
 <% content_for(:title, "Topic | Bibliotherapy") %>
 
-<h1><%= @topic.name %></h1>
+<h2><%= @topic.name %></h2>
+
+<p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic) %></p>
 
 <% if @topic.ailments.any? %>
   <h4>Here are the ailments for this topic</h4>
@@ -21,7 +23,6 @@
 <% end %>
 
 <hr>
-<p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic) %></p>
 
 <hr>
 <p><%= link_to "Update Topic", edit_topic_path(@topic) %></p>

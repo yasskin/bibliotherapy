@@ -589,6 +589,9 @@
         null,
         1,
         null,
+        null,
+        1,
+        null,
         null
       ],
       "/Users/Guest/Desktop/bibliotherapy/app/models/application_record.rb": [
@@ -677,7 +680,7 @@
         1,
         null,
         1,
-        14,
+        16,
         null,
         null,
         1,
@@ -727,6 +730,29 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/bibliotherapy/app/controllers/users_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/bibliotherapy/app/jobs/application_job.rb": [
         1,
         null
@@ -735,6 +761,19 @@
         1,
         1,
         1,
+        null
+      ],
+      "/Users/Guest/Desktop/bibliotherapy/app/mailers/user_mailer.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        0,
+        null,
+        null,
         null
       ],
       "/Users/Guest/Desktop/bibliotherapy/app/models/ailment.rb": [
@@ -762,8 +801,13 @@
       "/Users/Guest/Desktop/bibliotherapy/spec/factories.rb": [
         1,
         1,
+        1,
+        1,
+        1,
         null,
         null,
+        null,
+        1,
         1,
         1,
         null,
@@ -784,6 +828,41 @@
         1,
         1,
         1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Guest/Desktop/bibliotherapy/spec/features/add_user_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
         1,
         null,
         null
@@ -881,6 +960,26 @@
         null,
         null
       ],
+      "/Users/Guest/Desktop/bibliotherapy/spec/mailers/user_mailer_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/Guest/Desktop/bibliotherapy/spec/models/ailment_spec.rb": [
         1,
         null,
@@ -899,9 +998,9 @@
         null
       ],
       "/Users/Guest/Desktop/bibliotherapy/spec/models/user_spec.rb": [
-
+        1
       ]
     },
-    "timestamp": 1474045107
+    "timestamp": 1474058267
   }
 }

@@ -26,8 +26,14 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  #set the delivery method
+  config.action_mailer.delivery_method = :letter_opener
+
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  # specify what domain to user for mailer URLs
+  config.action_mailer.defaul_url_options = {host: "localhost:3000"}
 
   config.action_mailer.perform_caching = false
 
