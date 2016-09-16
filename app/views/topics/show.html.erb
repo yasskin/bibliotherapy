@@ -1,10 +1,5 @@
 <% content_for(:title, "Topic | Bibliotherapy") %>
 
-<% content_for(:navbar) do %>
-  <li><a href="/">Home</a></li>
-  <li><a href="/topics">Topics</a></li>
-<% end %>
-
 <h1><%= @topic.name %></h1>
 
 <% if @topic.ailments.any? %>
