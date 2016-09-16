@@ -48,6 +48,9 @@ $ bundle install
 ```
 * Database creation
 ```
+$ rake db:create
+```
+```
 $ rake db:migrate db:test:prepare
 ```
 * How to run the Rails server
