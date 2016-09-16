@@ -6,7 +6,7 @@ class AilmentsController < ApplicationController
 
   def show
     @ailment = Ailment.find(params[:id])
-    @cure = Cure.find(params[:id])
+    @cures = @ailment.cures
   end
 
   def new
