@@ -36,18 +36,19 @@ ruby 2.2.3p173 (2015-08-18 revision 51636)
 
 1. Clone the repository from GitHub
 ```
-$ https://github.com/yasskin/bibliotheraphy.git
-```
-* Database creation
-```
-$ rake db:migrate db:test:prepare
-```
-```
-$ bundle install
+$ https://github.com/yasskin/.git
 ```
 * Database initialization
 ```
 $ postgres
+```
+* bundle
+```
+$ bundle install
+```
+* Database creation
+```
+$ rake db:migrate db:test:prepare
 ```
 * How to run the Rails server
 ```
