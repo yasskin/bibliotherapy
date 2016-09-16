@@ -2,13 +2,13 @@ require 'rails_helper'
 
 describe "the delete a topic process" do
   it "deletes an existing topic" do
-    topic = Topic.create(:name => 'Desire')
+    topic = FactoryGirl.create(:topic)
     visit topics_path
-    click_link 'Desire'
+    click_link 'Love'
     click_link 'Add an Ailment'
-    fill_in 'Description', :with => 'Cover thy Neighbors Wife'
+    fill_in 'Description', :with => 'Covet thy Neighbors Wife'
     click_on "Create Ailment"
     click_link 'Delete'
-    expect(page).to have_no_content 'Cover thy Neighbors Wife'
+    expect(page).to have_no_content 'Covet thy Neighbors Wife'
   end
 end

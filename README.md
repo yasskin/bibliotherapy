@@ -38,13 +38,14 @@ ruby 2.2.3p173 (2015-08-18 revision 51636)
 ```
 $ https://github.com/yasskin/.git
 ```
+2. bundle
+```
+$ bundle install
+```
+3. Set up the Database
 * Database initialization
 ```
 $ postgres
-```
-* bundle
-```
-$ bundle install
 ```
 * Database creation
 ```
@@ -53,7 +54,7 @@ $ rake db:create
 ```
 $ rake db:migrate db:test:prepare
 ```
-* How to run the Rails server
+* Launch the Rails server
 ```
 $ rails server
 ```

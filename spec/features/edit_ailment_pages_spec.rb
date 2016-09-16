@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the edit a ailment process" do
   it "edits a ailment" do
-    topic = Topic.create(:name => 'Love')
+    topic = FactoryGirl.create(:topic)
     visit topics_path
     click_link 'Love'
     click_link 'Add an Ailment'
@@ -15,7 +15,7 @@ describe "the edit a ailment process" do
   end
 
   it "gives error when no description is entered" do
-    topic = Topic.create(:name => 'Love')
+    topic = FactoryGirl.create(:topic)
     visit topics_path
     click_link 'Love'
     click_link 'Add an Ailment'

@@ -5,4 +5,8 @@ Rails.application.routes.draw do
     resources :ailments, :except => [:show, :index]
   end
 
+  resources :ailments do
+    resources :cures
+  end
+
 end
