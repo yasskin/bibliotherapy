@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the edit a topic process" do
-  it "edits a new topic" do
+  it "edits a new topic", js: true do
     visit topics_path
     click_link 'New Topic'
     fill_in 'Name', :with => 'Anxieties'
