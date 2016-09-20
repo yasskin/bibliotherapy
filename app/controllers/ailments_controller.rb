@@ -12,6 +12,10 @@ class AilmentsController < ApplicationController
   def new
     @topic = Topic.find(params[:topic_id])
     @ailment = @topic.ailments.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
@@ -28,6 +32,10 @@ class AilmentsController < ApplicationController
   def edit
     @topic = Topic.find(params[:topic_id])
     @ailment = Ailment.find(params[:id])
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update

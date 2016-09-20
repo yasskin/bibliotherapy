@@ -2,7 +2,7 @@
 
 <h2><%= @topic.name %></h2>
 
-<p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic) %></p>
+<p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic), id: "new_ailment_js", remote: true %></p>
 
 <% if @topic.ailments.any? %>
   <h4>Here are the ailments for this topic</h4>
@@ -11,7 +11,7 @@
     <% @topic.ailments.each do |ailment| %>
       <li>
         <%= link_to ailment.description, topic_ailment_path(ailment) %> |
-        <%= link_to "Edit", edit_topic_ailment_path(@topic, ailment) %> |
+        <%= link_to "Edit", edit_topic_ailment_path(@topic, ailment), id: "edit_ailment_js", remote: true %> |
         <%= link_to "Delete", topic_ailment_path(@topic, ailment),
                                  :data => {:confirm => "Are you sure?",
                                                 :method => "delete"} %>
