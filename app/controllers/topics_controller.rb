@@ -10,6 +10,10 @@ class TopicsController < ApplicationController
 
   def new
     @topic = Topic.new
+    respond_to do |format|
+      format.html { render :new }
+      format.js
+    end
   end
 
   def create
@@ -24,7 +28,10 @@ class TopicsController < ApplicationController
 
   def edit
     @topic = Topic.find(params[:id])
-    render :edit
+    respond_to do |format|
+      format.html { render :edit }
+      format.js
+    end
   end
 
   def update

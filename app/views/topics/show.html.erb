@@ -24,7 +24,7 @@
 
 <hr>
 
-<p><%= link_to "Update Topic", edit_topic_path(@topic) %></p>
+<p><%= link_to "Update Topic", edit_topic_path(@topic), id: "edit_topic_js", remote: true %></p>
 <p><%= link_to "Delete Topic", topic_path(@topic),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
