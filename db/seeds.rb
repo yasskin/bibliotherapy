@@ -1,6 +1,8 @@
 
-topic = Topic.create(name: 'Boredom')
+topics = [
+  'Love', 'Work', 'Mood', 'Health', 'Travel'
+]
 
-topic.ailment << Topic.find_by_name("Look inward")
-
-User.create!(email: "me@home.com", password: "watching the telly")
+topics.each do |name|
+  Topic.create( name: name )
+end
