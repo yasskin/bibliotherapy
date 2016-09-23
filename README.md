@@ -43,7 +43,7 @@ $ https://github.com/yasskin/.git
 $ bundle install
 ```
 3. Set up the Database
-* Database initialization
+* In a separate terminal window, start the postgres server:
 ```
 $ postgres
 ```
@@ -57,7 +57,7 @@ $ rake db:migrate db:test:prepare
 ```
 $ rake db:seed
 ```
-* Launch the Rails server
+* In yet another terminal, launch the Rails server
 ```
 $ rails server
 ```
