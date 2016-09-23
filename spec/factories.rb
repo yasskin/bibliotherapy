@@ -11,3 +11,11 @@ FactoryGirl.define do
     name('Love')
   end
 end
+
+
+FactoryGirl.define do
+  factory :ailment do
+    description('Jealousy')
+    topic
+  end
+end
