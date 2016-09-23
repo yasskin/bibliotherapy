@@ -19,3 +19,15 @@ FactoryGirl.define do
     topic
   end
 end
+
+FactoryGirl.define do
+  factory :cure do
+    symptom('Love is making you sick')
+    headline('Cures for Lovesickness')
+    therapy('Regain reason')
+    author('Plato')
+    book_title('Symposium')
+    book_cover('Amazon.com')
+    ailment
+  end
+end

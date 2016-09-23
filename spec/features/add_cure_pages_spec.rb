@@ -7,7 +7,7 @@ describe "the add a cure process" do
     click_link 'Love'
     click_link 'Jealousy'
     click_link 'Add a Bibliographic Cure'
-    fill_in 'Symptom', :with => 'making you sick'
+    fill_in 'Symptom', :with => 'Love is making you sick'
     fill_in 'Headline', :with => 'Cures for Lovesickness'
     fill_in 'Therapy', :with => 'Regain reason'
     fill_in 'Author', :with => 'Plato'
