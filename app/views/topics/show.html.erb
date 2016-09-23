@@ -5,6 +5,7 @@
 <p><%= link_to "Add an Ailment", new_topic_ailment_path(@topic), id: "new_ailment_js", remote: true %></p>
 
 <% if @topic.ailments.any? %>
+
   <h4>Here are the ailments for this topic</h4>
 
   <ul>

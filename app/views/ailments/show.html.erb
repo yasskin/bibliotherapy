@@ -2,7 +2,7 @@
 
 <h2><%= @ailment.description %></h2>
 
-<p><%= link_to "Add a Bibliographic Cure", new_ailment_cure_path(@ailment) %></p>
+<p><%= link_to "Add a Bibliographic Cure", new_ailment_cure_path(@ailment), id: "new_cure_js", remote: true  %></p>
 
 <% if @ailment.cures.any? %>
 
@@ -16,6 +16,8 @@
       <li>Author: <%= cure.author %></li>
       <li>Book Title: <%= cure.book_title %></li>
       <li>Book Cover: <%= cure.book_cover %></li>
+      <li><%= link_to "Edit", edit_ailment_cure_path(@ailment, cure), id: "edit_cure_js", remote: true %></li>
+      <li><%= link_to "Delete", ailment_cure_path(@ailment, cure), :data => {:confirm => "Are you sure?", :method => "delete" }%></li>
     <% end %>
   </ul>
 <% else %>
