@@ -11,4 +11,15 @@ describe "the edit a cure process" do
     click_button 'Update Cure'
     expect(page).to have_content "lovesick"
   end
+
+  it "gives an error when no symptom is entered" do
+    cure = FactoryGirl.create(:cure)
+    visit topics_path
+    click_link 'Love'
+    click_link 'Jealousy'
+    click_link 'Edit'
+    fill_in 'Symptom', :with => ""
+    click_button 'Update Cure'
+    expect(page).to have_content "errors"
+  end
 end
