@@ -13,7 +13,7 @@ describe "the edit a topic process" do
     expect(page).to have_content 'Anxiety'
   end
 
-  it "gives error when no name is entered" do
+  it "gives error when no name is entered", js: true do
     visit topics_path
     click_link 'New Topic'
     fill_in 'Name', :with => 'Anxieties'

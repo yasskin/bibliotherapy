@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'the edit user process' do
-  it "should edit the user information" do
+  it "should edit the user information", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit root_path
@@ -12,7 +12,7 @@ describe 'the edit user process' do
     expect(page).to have_content 'Your account has been updated successfully.'
   end
 
-  it "should not edit the user information if a parameter is not entered" do
+  it "should not edit the user information if a parameter is not entered", js: true do
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
     visit root_path

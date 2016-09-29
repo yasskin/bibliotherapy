@@ -12,7 +12,6 @@ FactoryGirl.define do
   end
 end
 
-
 FactoryGirl.define do
   factory :ailment do
     description('Jealousy')

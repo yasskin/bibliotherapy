@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "the add a cure process" do
-  it "adds a cure" do
+  it "adds a cure", js: true do
     ailment = FactoryGirl.create(:ailment)
     visit topics_path
     click_link 'Love'
@@ -17,7 +17,7 @@ describe "the add a cure process" do
     expect(page).to have_content 'Cure successfully created!'
   end
 
-  it "gives an error when no description is entered" do
+  it "gives an error when no description is entered", js: true do
     ailment = FactoryGirl.create(:ailment)
     visit topics_path
     click_link 'Love'
