@@ -14,8 +14,8 @@
       <li>Symptom: <%= cure.symptom %></li>
       <li>Therapy: <%= cure.therapy %></li>
       <li>Author: <%= cure.author %></li>
-      <li>Book Title: <%= cure.book_title %></li>
-      <li>Book Cover: <%= link_to cure.book_title, cure.book_cover %></li>
+      <li>Book Title: <%= link_to cure.book_title, cure.book_cover %></li>
+      <li>Book Cover: <%= image_tag cure.book_cover %></li>
       <li><%= link_to "Edit", edit_ailment_cure_path(@ailment, cure), id: "edit_cure_js", remote: true %></li>
       <li><%= link_to "Delete", ailment_cure_path(@ailment, cure), :data => {:confirm => "Are you sure?", :method => "delete" }%></li>
     <% end %>
