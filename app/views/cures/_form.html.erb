@@ -1,8 +1,6 @@
 <%= render( 'layouts/errors', :object => @cure ) %>
 
 <%= form_for [@ailment, @cure], remote: true do |f| %>
-  <%= f.label :symptom %>
-  <%= f.text_field :symptom %>
   <%= f.label :headline %>
   <%= f.text_field :headline %>
   <%= f.label :therapy %>
@@ -13,5 +11,7 @@
   <%= f.text_field :book_title %>
   <%= f.label :book_cover %>
   <%= f.text_field :book_cover %>
+  <%= f.label :url %>
+  <%= f.text_field :url %>
   <p><%= f.submit %></p>
 <% end %>
