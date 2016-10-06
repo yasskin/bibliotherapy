@@ -49,7 +49,7 @@
 
 private
   def cure_params
-    params.require(:cure).permit(:symptom, :headline, :therapy, :author, :book_title, :book_cover, :ailment_id)
+    params.require(:cure).permit(:url, :headline, :therapy, :author, :book_title, :book_cover, :ailment_id)
   end
 
  end

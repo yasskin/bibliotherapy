@@ -10,10 +10,10 @@
 
   <ul>
     <% @ailment.cures.each do |cure| %>
-      <li>Symptom: <%= cure.symptom %></li>
+      <li>Headline: <%= cure.headline %></li>
       <li>Therapy: <%= cure.therapy %></li>
       <li>Author: <%= cure.author %></li>
-      <li>Book Title: <%= link_to cure.book_title, cure.headline %></li>
+      <li>Book Title: <%= link_to cure.book_title, cure.url %></li>
       <li>Book Cover: <%= image_tag cure.book_cover %></li>
       <li><%= link_to "Edit", edit_ailment_cure_path(@ailment, cure), id: "edit_cure_js", remote: true %></li>
       <li><%= link_to "Delete", ailment_cure_path(@ailment, cure), :data => {:confirm => "Are you sure?", :method => "delete" }%></li>
