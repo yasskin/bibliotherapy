@@ -13,18 +13,12 @@ _A web app that guides you to those amazing but often elusive works of literatur
 | ------------- | ----:|
 | Does your code meet general coding standards (commits, spacing, naming, etc)? | -- |
 | Is there thorough test coverage - unit and integration? | -- |
-| Do your routes follow proper convention including a root route?
- | -- |
-| Is your application logic in the models (not the controller)?
- | -- |
-| Did you use success and error flash messages?
- | -- |
-| Are form and route helpers present and functioning?
- | -- |
-| Does the app use the asset pipeline for Bootstrap/CSS?
- | -- |
-| Does the application work?
- | -- |
+| Do your routes follow proper convention including a root route? | -- |
+| Is your application logic in the models (not the controller)? | -- |
+| Did you use success and error flash messages? | -- |
+| Are form and route helpers present and functioning? | -- |
+| Does the app use the asset pipeline for Bootstrap/CSS? | -- |
+| Does the application work? | -- |
 
 * Ruby version
 
